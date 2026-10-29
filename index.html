@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9f0">
+  <title>攝影構圖小達人｜PHOTO QUEST</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header container">
+    <a href="#" id="logo" class="brand" aria-label="攝影構圖小達人，回首頁">
+      <span class="brand-icon">📷</span>
+      <span>攝影構圖小達人 <small>PHOTO QUEST</small></span>
+    </a>
+    <button id="soundBtn" class="outline-btn small" type="button" aria-pressed="true">
+      🔊 音效開啟
+    </button>
+  </header>
+
+  <main class="container">
+    <section id="home" class="screen">
+      <div class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">✨ 我的第一堂攝影課</span>
+          <h1>攝影構圖<br><em>小達人！</em></h1>
+          <p>用眼睛發現世界，用構圖說故事！從看照片到模擬拍攝，一起完成 8 道趣味攝影任務。</p>
+          <button id="startBtn" type="button" class="primary-btn">
+            開始攝影挑戰 →
+          </button>
+          <p class="fine">約 5～8 分鐘 ・ 不需要攝影基礎 ・ 手機也能玩</p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="mountain one"></div>
+          <div class="mountain two"></div>
+          <div class="photo-card">
+            <div class="photo-landscape">
+              <div class="photo-tree">🌳</div>
+            </div>
+          </div>
+          <div class="hero-camera">📸</div>
+        </div>
+      </div>
+
+      <div class="stages">
+        <article class="stage-preview">
+          <span>🖼️</span>
+          <div>
+            <strong>第一關：攝影觀察家</strong>
+            <p>三分法、對稱、引導線</p>
+          </div>
+        </article>
+        <article class="stage-preview">
+          <span>🌤️</span>
+          <div>
+            <strong>第二關：拍照練習生</strong>
+            <p>背景、角度與光線</p>
+          </div>
+        </article>
+        <article class="stage-preview">
+          <span>🎞️</span>
+          <div>
+            <strong>第三關：小小攝影師</strong>
+            <p>景別與照片說故事</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="stage" class="screen" hidden>
+      <div class="panel stage-panel">
+        <span id="stageIcon" class="big-emoji">🖼️</span>
+        <span id="stageTag" class="pill">第一關</span>
+        <h2 id="stageName">攝影觀察家</h2>
+        <p id="stageDescription">一起來認識構圖吧！</p>
+        <button id="enterBtn" class="primary-btn" type="button">
+          進入關卡 →
+        </button>
+      </div>
+    </section>
+
+    <section id="quiz" class="screen" hidden>
+      <div class="panel quiz-panel">
+        <div class="meta">
+          <span id="stageLabel">第一關</span>
+          <span id="countLabel">第 1 / 8 題</span>
+        </div>
+
+        <div class="progress" role="progressbar" aria-label="答題進度"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+          <div id="progressFill"></div>
+        </div>
+
+        <span class="pill" id="goalLabel">📷 構圖觀察</span>
+        <h2 id="questionTitle"></h2>
+        <p id="questionHint" class="muted"></p>
+
+        <div id="photoChoices" class="photo-choices"></div>
+
+        <p class="instruction" id="instruction">
+          請觀察圖片後選擇答案
+        </p>
+
+        <div id="orderDisplay" class="order-display" hidden aria-live="polite"></div>
+        <button id="clearOrderBtn" type="button" class="text-btn" hidden>
+          ↻ 清除排列
+        </button>
+
+        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+
+        <div class="actions">
+          <button id="submitBtn" type="button" class="primary-btn" disabled>
+            送出答案 →
+          </button>
+          <button id="nextBtn" type="button" class="primary-btn" hidden>
+            下一題 →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="screen" hidden>
+      <div class="panel result-panel">
+        <span class="big-emoji">🏆</span>
+        <h2>攝影挑戰完成！</h2>
+
+        <p class="score" id="score">8 <small>/ 8 題</small></p>
+        <p id="summary" class="muted"></p>
+
+        <div class="goal-results">
+          <h3>📊 我的學習成果</h3>
+          <div id="goalBars"></div>
+        </div>
+
+        <div class="result-actions">
+          <button id="wrongBtn" class="outline-btn" type="button">錯題再練</button>
+          <button id="againBtn" class="primary-btn" type="button">全部重新挑戰</button>
+          <button id="homeBtn" class="outline-btn" type="button">回到首頁</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    攝影構圖小達人 · PBL 多媒體測驗系統 · 示意圖片由程式繪製
+  </footer>
+</body>
+</html>
